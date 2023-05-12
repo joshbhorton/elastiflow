@@ -11,7 +11,8 @@ services:
     ports:
       - 9200:9200
       - 9300:9300
-
+    volumes:
+      - ./elastiflow/data:/usr/share/elasticsearch/data
   elastiflow-kibana:
     image: docker.elastic.co/kibana/kibana:7.17.1
     container_name: elastiflow-kibana
@@ -41,7 +42,7 @@ services:
     container_name: flow-collector
     restart: 'unless-stopped'
     ports:
-      - 9995:9995
+      - 9995:9995/udp
     volumes:
       - ./elastiflow/etc/elastiflow:/etc/elastiflow
     environment:

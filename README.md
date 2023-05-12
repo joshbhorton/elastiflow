@@ -15,12 +15,10 @@
     - [View Elastiflow dashboards](#view-elastiflow-dashboards)
   - [Add Netflow data to Elastiflow](#add-netflow-data-to-elastiflow)
     - [Import Netflow data from a file](#import-netflow-data-from-a-file)
-    - [How to collect Netflow data](#how-to-collect-netflow-data)
-    - [Verify Netflow collector port is open](#verify-netflow-collector-port-is-open)
+    - [Collect Netflow data](#collect-netflow-data)
   - [Troubleshooting](#troubleshooting)
-    - [Verify Netflow collector port is open](#verify-netflow-collector-port-is-open-1)
+    - [Verify Netflow collector port is open](#verify-netflow-collector-port-is-open)
     - [Verify incoming flow data from an exporter](#verify-incoming-flow-data-from-an-exporter)
-  - [Netflow exporter](#netflow-exporter)
 
 ## Sample Screenshots
 <img src='images/flows_sample.png' width='800px' />
@@ -44,8 +42,9 @@
 * `docker ps` - Verify containers are running (elasticsearch, kibana and flow-collector)
 
 * Download Elastiflow Kibana objects:
-    *  `https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-codex.ndjson`
-    * `https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-ecs.ndjson`
+    <!-- *  `https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-codex.ndjson` -->
+    <!-- * `https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-ecs.ndjson` -->
+    * [kibana-7.17.x-flow-ecs.ndjson](https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-ecs.ndjson)
     <br />
 
 * Navigate to `http://<server_ip>:5601` with a web browser to access Kibana.
@@ -197,7 +196,7 @@ Navigate to the Kibana front-end using a web browser. For simplicity and develop
 
 ### Download Elastiflow Kibana objects
 Download one of the .ndjson files to a local directory on your PC
-* [kibana-7.17.x-flow-codex.ndjson](https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-codex.ndjson)
+<!-- * [kibana-7.17.x-flow-codex.ndjson](https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-codex.ndjson) -->
 * [kibana-7.17.x-flow-ecs.ndjson](https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-ecs.ndjson)
 <br />
 
@@ -205,34 +204,39 @@ Download one of the .ndjson files to a local directory on your PC
 Import the .ndjson file downloaded from Github using the Kibana Web GUI.
 * Navigate to [Stack Management > Saved Objects](http://127.0.0.1:5601/app/management/kibana/objects')
 * Click the 'Import' button
-    <details>
-    <summary markdown="span">Screenshot</summary>
-    <img src='./images/import_objects.png' />
-    </details>
+    <!-- <details>
+    <summary markdown="span">Screenshot</summary> -->
+    <img src='./images/import_objects.png' width=500px />
+    <!-- </details> -->
+    <br /><br />
+
 * Select the file to be imported.
     * kibana-7.17.x-flow-ecs.ndjson
-    * kibana-7.17.x-flow-codex.ndjson
-    <details>
-    <summary markdown="span">Screenshot</summary>
-    <img src='./images/object_file.png' />
-    </details>
+    <!-- * kibana-7.17.x-flow-codex.ndjson -->
+    <!-- <details>
+    <summary markdown="span">Screenshot</summary> -->
+    <img src='./images/object_file.png' width=500px />
+    <!-- </details> -->
+    <br /><br />
 
 * Verify objects were imported
 
-    <details>
-    <summary markdown="span">Screenshot</summary>
-    <img src='./images/objects_imported.png' />
-    </details>
+    <!-- <details>
+    <summary markdown="span">Screenshot</summary> -->
+    <img src='./images/objects_imported.png' width=500px />
+    <!-- </details> -->
+    <br /><br />
 
 ### View Elastiflow dashboards
 Navigate to
 
 * Navigate to the [Kibana Dashboards](http://<server_ip>:5601/app/dashboards)
 * Explore dashboards
-    <details>
-    <summary markdown="span">Screenshot</summary>
-    <img src='./images/dashboards.png' />
-    </details>
+    <!-- <details>
+    <summary markdown="span">Screenshot</summary> -->
+    <img src='./images/dashboards.png' width=500px />
+    <!-- </details> -->
+    <br /><br />
 
 ## Add Netflow data to Elastiflow
 Netflow data can be imported from a file or collected using the 'flow-collector' container.
@@ -241,65 +245,116 @@ Netflow data can be imported from a file or collected using the 'flow-collector'
 ### Import Netflow data from a file
 * Navigate to [Integrations > Upload File](http://127.0.0.1:5601/app/home#/tutorial_directory/fileDataViz)
 * Select or drag and drop a file on the page
-    <details>
-    <summary markdown="span">Screenshot</summary>
-    <img src='images/upload_file_start.png' />
+    <!-- <details>
+    <summary markdown="span">Screenshot</summary> -->
+    <img src='images/upload_file_start.png' width=500px />
     <br /><br />
-    <img src='images/import_select_file.png' />
-    </details>
-    <br />
+    <img src='images/import_select_file.png' width=500px />
+    <!-- </details> -->
+    <br /><br />
+
 * Review the file summary and click 'Import' at the bottom of the page.
-    <details>
-    <summary markdown="span">Screenshot</summary>
-    <img src='images/import_pre_analysis.png' />
+    <!-- <details>
+    <summary markdown="span">Screenshot</summary> -->
+    <img src='images/import_pre_analysis.png' width=500px />
     <br />
-    <img src='images/import_summary.png' />
+    <img src='images/import_summary.png' width=500px />
     <br />
-    <img src='images/import_file_stats.png' />
+    <img src='images/import_file_stats.png' width=500px />
     <br />
-    <img src='images/click_import.png' />
-    </details>
-    <br />
+    <img src='images/click_import.png' width=500px />
+    <!-- </details> -->
+    <br /><br />
 
 * Set an index name and click 'Import'
-    <details>
-    <summary markdown="span">Screenshot</summary>
-    <img src='images/set_index_name.png' />
-    </details>
-    <br />
+    <!-- <details>
+    <summary markdown="span">Screenshot</summary> -->
+    <img src='images/set_index_name.png' width=500px />
+    <!-- </details> -->
+    <br /><br />
 
 * Review the status of the import
-    <details>
-    <summary markdown="span">Screenshot</summary>
-    <img src='images/file_imported.png' />
-    </details>
-    <br />
+    <!-- <details>
+    <summary markdown="span">Screenshot</summary> -->
+    <img src='images/file_imported.png' width=500px />
+    <!-- </details> -->
+    <br /><br />
 
 
-### How to collect Netflow data
-<details>
+### Collect Netflow data
+Netflow data is collected by the 'flow-collector' container. By default, it uses port 9995 to receive netflow data from network devices. The collector should automatically work but network devices will need to be configured to export data to udp port 9995.
+<!-- <details>
 <summary markdown="span">Sample Output</summary>
 </details>
-<br />
+<br /> -->
 
-### Verify Netflow collector port is open
-<details>
-<summary markdown="span">Sample Output</summary>
-</details>
-<br />
 
 ## Troubleshooting
 ### Verify Netflow collector port is open
+Use the 'netstat' command to verify the netflow collector port is listening.
+
+```
+netstat -an | grep 9995
+```
 <details>
 <summary markdown="span">Sample Output</summary>
+
+```
+netstat -an | grep 9995
+tcp46      0      0  *.9995                 *.*                    LISTEN
+```
+
 </details>
 <br />
+
 
 ### Verify incoming flow data from an exporter
+Use the 'netstat' command to identify the interface you would like to capture data on to verify the netflow collector is receiving data from the netflow exporters
+
+```
+netstat -r
+```
+
 <details>
 <summary markdown="span">Sample Output</summary>
+
+```bash
+bash elastiflow # netstat -r
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+default         _gateway        0.0.0.0         UG        0 0          0 eno6
+192.168.10.128  0.0.0.0         255.255.255.192 U         0 0          0 eno6
+16.0.0.0        0.0.0.0         255.0.0.0       U         0 0          0 ens2f1np1
+172.17.0.0      0.0.0.0         255.255.0.0     U         0 0          0 docker0
+172.20.0.0      0.0.0.0         255.255.0.0     U         0 0          0 br-cd728ab1741f
+172.22.0.0      0.0.0.0         255.255.0.0     U         0 0          0 br-4ccd6f911153
+172.26.0.0      0.0.0.0         255.255.0.0     U         0 0          0 br-c455b5e0973e
+192.168.100.0   0.0.0.0         255.255.255.252 U         0 0          0 tmfifo_net0
+```
+
 </details>
-<br />
+<br /><br />
 
+Use the 'tcpdump' command to verify netflow data is being received from netflow exporters.
 
-## Netflow exporter
+```
+tcpdump -i <interface> udp port 9995
+```
+<details>
+<summary markdown="span">Sample Output</summary>
+
+```
+bash elastiflow # sudo tcpdump -i eno6 udp port 9995
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eno6, link-type EN10MB (Ethernet), capture size 262144 bytes
+20:40:10.001268 IP 192.168.10.136.38317 > 192.168.10.137.9995: UDP, length 72
+20:40:20.001278 IP 192.168.10.136.38317 > 192.168.10.137.9995: UDP, length 648
+20:40:30.001204 IP 192.168.10.136.38317 > 192.168.10.137.9995: UDP, length 72
+20:40:45.001213 IP 192.168.10.136.38317 > 192.168.10.137.9995: UDP, length 72
+20:40:50.001178 IP 192.168.10.136.38317 > 192.168.10.137.9995: UDP, length 312
+20:41:05.001224 IP 192.168.10.136.38317 > 192.168.10.137.9995: UDP, length 72
+20:41:15.001203 IP 192.168.10.136.38317 > 192.168.10.137.9995: UDP, length 72
+```
+
+</details>
+<br /><br />

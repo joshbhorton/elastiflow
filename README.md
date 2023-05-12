@@ -42,8 +42,9 @@
 * `docker ps` - Verify containers are running (elasticsearch, kibana and flow-collector)
 
 * Download Elastiflow Kibana objects:
-    *  `https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-codex.ndjson`
-    * `https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-ecs.ndjson`
+    <!-- *  `https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-codex.ndjson` -->
+    <!-- * `https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-ecs.ndjson` -->
+    * [kibana-7.17.x-flow-ecs.ndjson](https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-ecs.ndjson)
     <br />
 
 * Navigate to `http://<server_ip>:5601` with a web browser to access Kibana.
@@ -195,7 +196,7 @@ Navigate to the Kibana front-end using a web browser. For simplicity and develop
 
 ### Download Elastiflow Kibana objects
 Download one of the .ndjson files to a local directory on your PC
-* [kibana-7.17.x-flow-codex.ndjson](https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-codex.ndjson)
+<!-- * [kibana-7.17.x-flow-codex.ndjson](https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-codex.ndjson) -->
 * [kibana-7.17.x-flow-ecs.ndjson](https://github.com/elastiflow/elastiflow_for_elasticsearch/blob/master/kibana/flow/kibana-7.17.x-flow-ecs.ndjson)
 <br />
 
@@ -211,7 +212,7 @@ Import the .ndjson file downloaded from Github using the Kibana Web GUI.
 
 * Select the file to be imported.
     * kibana-7.17.x-flow-ecs.ndjson
-    * kibana-7.17.x-flow-codex.ndjson
+    <!-- * kibana-7.17.x-flow-codex.ndjson -->
     <!-- <details>
     <summary markdown="span">Screenshot</summary> -->
     <img src='./images/object_file.png' width=500px />
